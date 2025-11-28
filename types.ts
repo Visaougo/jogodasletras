@@ -1,4 +1,3 @@
-
 export enum ModuleType {
   SYLLABLES = 'SYLLABLES',     // Consciência Fonológica
   FLUENCY = 'FLUENCY',         // Leitura Fluente
@@ -117,6 +116,9 @@ export interface UserState {
   // Daily Streak System
   loginStreak: number;
   lastRewardClaimedDate: string;
+  
+  // ✅ NOVO CAMPO ADICIONADO: Tempo de jogo diário em segundos
+  dailyPlayTime: number; 
 
   // New Game Stats for Achievements
   gameStats: {

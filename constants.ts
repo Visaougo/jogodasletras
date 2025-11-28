@@ -1,9 +1,7 @@
-
-
 import { BiomeModule, ModuleType, ShopItem, SkinType, Achievement, UserState, DailyQuest, Card, MineChallenge, FieldChallenge, BlazeChallenge, FillBlankChallenge, StoryCraftChallenge, ReverseChallenge, MonsterChallenge, FinalBookChallenge, DeliveryChallenge, WordSearchChallenge, MemoryChallenge } from './types';
 
 export const LEVEL_THRESHOLDS = [0, 100, 300, 600, 1000, 2000, 5000];
-export const MASCOT_THRESHOLDS = [0, 50, 200, 500, 1000]; // Mascot levels based on XP
+export const MASCOT_THRESHOLDS = [0, 50, 200, 500, 1000]; 
 
 export const BIOMES: BiomeModule[] = [
   {
@@ -198,32 +196,21 @@ export const COLLECTIBLE_CARDS: Card[] = [
 ];
 
 export const SHOP_ITEMS: ShopItem[] = [
-  // Itens Essenciais
   { id: 'wolf', name: 'LOBO DOMESTICADO', price: 25, icon: '🐺', description: 'UM AMIGO QUE LÊ PARA VOCÊ.', category: 'ITEM' },
-  
-  // Skins de Lobo
   { id: 'skin_wolf_magic', name: 'LOBO MÁGICO', price: 40, icon: '🦄', description: 'UM LOBO COM PODERES MÍSTICOS.', category: 'WOLF_SKIN', value: 'MAGIC' },
   { id: 'skin_wolf_space', name: 'LOBO ESPACIAL', price: 45, icon: '👨‍🚀', description: 'PRONTO PARA VIAJAR NAS ESTRELAS.', category: 'WOLF_SKIN', value: 'SPACE' },
   { id: 'skin_wolf_pirate', name: 'LOBO PIRATA', price: 40, icon: '🏴‍☠️', description: 'EM BUSCA DE TESOUROS.', category: 'WOLF_SKIN', value: 'PIRATE' },
   { id: 'skin_wolf_ninja', name: 'LOBO NINJA', price: 50, icon: '🥷', description: 'SILENCIOSO E RÁPIDO.', category: 'WOLF_SKIN', value: 'NINJA' },
   { id: 'item_reader_mark', name: 'MARCA DO LEITOR', price: 9999, icon: '🧐', description: 'RECOMPENSA LENDÁRIA DO LIVRO.', category: 'WOLF_SKIN', value: 'READER' },
   { id: 'skin_wolf_crown', name: 'COROA DO SÁBIO', price: 9999, icon: '👑', description: 'RECOMPENSA DE VELOCIDADE.', category: 'WOLF_SKIN', value: 'SAGE' },
-
-  // Efeitos de Voz
   { id: 'voice_robot', name: 'VOZ DE ROBÔ', price: 30, icon: '🤖', description: 'FALA DIVERTIDA DE ROBÔ.', category: 'VOICE_EFFECT', value: 'ROBOT' },
   { id: 'voice_echo', name: 'VOZ COM ECO', price: 30, icon: '📢', description: 'PARECE QUE ESTÁ NUMA CAVERNA.', category: 'VOICE_EFFECT', value: 'ECHO' },
   { id: 'voice_high', name: 'VOZ DE ESQUILO', price: 30, icon: '🐿️', description: 'UMA VOZ FINA E ENGRAÇADA.', category: 'VOICE_EFFECT', value: 'HIGH' },
-
-  // Temas de Mundo
   { id: 'theme_neon', name: 'MUNDO NEON', price: 60, icon: '🌆', description: 'CORES BRILHANTES NO ESCURO.', category: 'THEME', value: 'NEON' },
   { id: 'theme_ice', name: 'PLANETA GELADO', price: 55, icon: '❄️', description: 'TUDO CONGELADO E AZUL.', category: 'THEME', value: 'ICE' },
   { id: 'theme_desert', name: 'DESERTO QUENTE', price: 55, icon: '🌵', description: 'AREIA E SOL FORTE.', category: 'THEME', value: 'DESERT' },
-
-  // Outros Itens
   { id: 'diamond_sword', name: 'ESPADA DE DIAMANTE', price: 10, icon: '⚔️', description: 'UMA ESPADA BRILHANTE.', category: 'ITEM' },
   { id: 'map', name: 'MAPA DO TESOURO', price: 8, icon: '🗺️', description: 'LEVA A LUGARES SECRETOS.', category: 'ITEM' },
-  
-  // Vales Reais
   { id: 'voucher_mod', name: 'VALE MOD', price: 50, icon: '📦', description: 'INSTALAR UM MOD NOVO.', category: 'VOUCHER' },
   { id: 'voucher_build', name: 'VALE CONSTRUÇÃO', price: 70, icon: '🏠', description: 'CONSTRUÇÃO ESPECIAL PARA VOCÊ.', category: 'VOUCHER' },
   { id: 'voucher_creative', name: 'VALE CRIATIVO', price: 35, icon: '🎨', description: '20 MIN DE MODO CRIATIVO.', category: 'VOUCHER' },
@@ -272,7 +259,6 @@ export const ACHIEVEMENTS: Achievement[] = [
     icon: '📚',
     condition: (u) => u.learnedWords.length >= 10
   },
-  // NEW ACHIEVEMENTS
   {
     id: 'syllable_master',
     title: 'MESTRE DAS SÍLABAS',
@@ -338,7 +324,7 @@ export const AMBIENT_MOBS = [
     { id: 'bee', icon: '🐝', animation: 'fly-random' },
     { id: 'chicken', icon: '🐔', animation: 'peck' },
     { id: 'villager', icon: '🧑‍🌾', animation: 'walk' },
-    { id: 'chest', icon: '🧳', animation: 'hop' } // Walking chest
+    { id: 'chest', icon: '🧳', animation: 'hop' } 
 ];
 
 export const WOLF_EVOLUTION_TREE = [
@@ -355,7 +341,7 @@ export const WOLF_EVOLUTION_TREE = [
 ];
 
 export const INITIAL_USER_STATE: UserState = {
-  name: 'LUCAS GABRIEL', // Personalized default
+  name: 'LUCAS GABRIEL',
   skin: 'steve' as SkinType,
   xp: 0,
   level: 1,
@@ -369,18 +355,12 @@ export const INITIAL_USER_STATE: UserState = {
   mascotXp: 0,
   mascotLevel: 1,
   lastLoginDate: new Date().toDateString(),
-  
-  // Daily Streak System
   loginStreak: 1,
   lastRewardClaimedDate: "",
-
-  // Stats for Achievements
   gameStats: {
       syllableGamesPlayed: 0,
       fastestCompletionTime: 0
   },
-
-  // Adaptive System
   adaptiveStats: {
     errorCount: {},
     averageResponseTime: 5000, 
@@ -389,24 +369,19 @@ export const INITIAL_USER_STATE: UserState = {
     sentenceLevel: 'SHORT',
     consecutiveCorrect: 0
   },
-  
   dailyVillagerQuest: null,
-
-  // Defaults for new customization
   equippedWolfSkin: 'DEFAULT',
   equippedVoiceEffect: 'NORMAL',
   equippedTheme: 'DEFAULT',
-  
   avatarAccessories: {},
-
   settings: {
     nightMode: false,
     soundEnabled: true
   }
 };
 
-// --- FALLBACK CONTENT (ENHANCED FOR OFFLINE PLAY) ---
-// ... (The 50+ item lists remain here, unchanged for brevity, as I am only appending the new items/constants above)
+// --- FALLBACK CONTENT ---
+
 export const FALLBACK_LETTERS = [
   { id: '1', word: 'SOL', emoji: '☀️' },
   { id: '2', word: 'LUA', emoji: '🌙' },
@@ -905,4 +880,39 @@ export const FALLBACK_MEMORY: MemoryChallenge[] = [
       { id: 'pair_6', content: '⚽', type: 'IMAGE' }
     ]
   }
+];
+
+export const LORE_ENTRIES = [
+    {
+        id: 'lore_herobrine',
+        title: 'A LENDA DE HEROBRINE',
+        character: 'HEROBRINE',
+        unlockLevel: 2,
+        image: '/assets/lore_herobrine.png',
+        story: 'Dizem que ele é um fantasma que assombra os mundos. Ele tem a aparência do Steve, mas com olhos brancos brilhantes! Ele constrói túneis 2x2 e pirâmides de areia no mar. Ninguém sabe se ele é real ou apenas um mito dos mineradores antigos.'
+    },
+    {
+        id: 'lore_nether',
+        title: 'O PORTAL DO SUBMUNDO',
+        character: 'O NETHER',
+        unlockLevel: 5,
+        image: '/assets/lore_nether.png',
+        story: 'Antigamente, o mundo era apenas água e terra. Um dia, exploradores misturaram Água e Lava e criaram a Obsidiana. Ao acender o portal com fogo, descobriram uma dimensão vermelha e quente, cheia de perigos, fortalezas e Piglins.'
+    },
+    {
+        id: 'lore_wither',
+        title: 'A CRIATURA DE TRÊS CABEÇAS',
+        character: 'WITHER',
+        unlockLevel: 8,
+        image: '/assets/lore_wither.png',
+        story: 'Esta é a única criatura que não nasce naturalmente: ela precisa ser construída! Usando Areia das Almas e três cabeças de Esqueleto Wither, invoca-se um monstro terrível. Dizem que quem o derrota ganha uma Estrela do Nether.'
+    },
+    {
+        id: 'lore_the_end',
+        title: 'O FIM DA JORNADA',
+        character: 'THE END',
+        unlockLevel: 10,
+        image: '/assets/lore_the_end.png',
+        story: 'Seguindo os Olhos de Ender, encontra-se o portal para o Fim. É uma ilha flutuante no vazio eterno, lar dos Endermen e guardada pelo poderoso Dragão Ender. Dizem que lá existem cidades com navios que flutuam.'
+    }
 ];
